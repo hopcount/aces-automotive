@@ -1,11 +1,14 @@
 /* Aces Automotive — rebuilt static site styles */
 
 :root {
-  --navy: #14213d;
-  --navy-dark: #0d1626;
-  --red: #d7263d;
-  --red-dark: #b31d30;
-  --yellow: #f4a300;
+  --navy: #404a53;
+  --navy-dark: #23282d;
+  --accent: #404a53;
+  --accent-dark: #313940;
+  --gold: #ddab43;
+  --gold-dark: #b58c36;
+  --yellow: #ddab43;
+  --danger: #b3382c;
   --gray-50: #f7f7f8;
   --gray-100: #eceef1;
   --gray-300: #c7ccd4;
@@ -58,7 +61,7 @@ p { margin: 0 0 14px; color: var(--gray-600); }
 
 .eyebrow {
   display: inline-block;
-  color: var(--red);
+  color: var(--accent);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -79,8 +82,8 @@ p { margin: 0 0 14px; color: var(--gray-600); }
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 .btn:hover { transform: translateY(-2px); }
-.btn-primary { background: var(--red); color: var(--white); box-shadow: var(--shadow); }
-.btn-primary:hover { background: var(--red-dark); }
+.btn-primary { background: var(--accent); color: var(--white); box-shadow: var(--shadow); }
+.btn-primary:hover { background: var(--accent-dark); }
 .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.6); }
 .btn-outline:hover { background: rgba(255,255,255,0.12); }
 .btn-navy { background: var(--navy); color: var(--white); }
@@ -131,7 +134,7 @@ nav.main-nav ul {
   font-size: 0.95rem;
 }
 nav.main-nav a { color: var(--gray-800); padding: 6px 0; border-bottom: 2px solid transparent; }
-nav.main-nav a:hover, nav.main-nav a.active { color: var(--red); border-color: var(--red); }
+nav.main-nav a:hover, nav.main-nav a.active { color: var(--accent); border-color: var(--accent); }
 nav.main-nav .has-dropdown { position: relative; }
 nav.main-nav .dropdown {
   display: none;
@@ -209,11 +212,11 @@ form input, form select, form textarea {
   color: var(--gray-800);
 }
 form textarea { resize: vertical; min-height: 90px; }
-form input:focus, form select:focus, form textarea:focus { outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(215,38,61,0.15); }
+form input:focus, form select:focus, form textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(64,74,83,0.18); }
 .hp-field { position: absolute; left: -9999px; }
 .form-status { margin-top: 10px; font-size: 0.9rem; font-weight: 600; }
 .form-status.ok { color: #1a7f37; }
-.form-status.err { color: var(--red); }
+.form-status.err { color: var(--danger); }
 
 /* Sections */
 section { padding: 70px 0; }
@@ -237,11 +240,11 @@ section.alt { background: var(--gray-50); }
 .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .service-card .icon {
   width: 52px; height: 52px; border-radius: 12px;
-  background: rgba(215,38,61,0.1); color: var(--red);
+  background: rgba(64,74,83,0.08); color: var(--accent);
   display: flex; align-items: center; justify-content: center;
   font-size: 1.4rem; margin-bottom: 16px; font-weight: 800;
 }
-.service-card a.more { color: var(--red); font-weight: 700; font-size: 0.9rem; }
+.service-card a.more { color: var(--accent); font-weight: 700; font-size: 0.9rem; }
 
 /* Two column content w/ image */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
@@ -257,7 +260,7 @@ section.alt { background: var(--gray-50); }
 
 .checklist { list-style: none; margin: 0; padding: 0; }
 .checklist li { display: flex; gap: 10px; margin-bottom: 10px; color: var(--gray-800); }
-.checklist li::before { content: "✓"; color: var(--red); font-weight: 800; flex-shrink: 0; }
+.checklist li::before { content: "✓"; color: var(--accent); font-weight: 800; flex-shrink: 0; }
 
 .stat-row { display: flex; gap: 40px; flex-wrap: wrap; margin-top: 20px; }
 .stat-row .stat b { display: block; font-size: 1.7rem; color: var(--navy); }
@@ -286,7 +289,7 @@ section.alt { background: var(--gray-50); }
 
 /* CTA band */
 .cta-band {
-  background: var(--red);
+  background: var(--accent);
   color: var(--white);
   padding: 46px 0;
 }
@@ -321,7 +324,7 @@ footer.site-footer li { margin-bottom: 10px; }
   background: rgba(255,255,255,0.08);
   display: flex; align-items: center; justify-content: center;
 }
-.social-row a:hover { background: var(--red); }
+.social-row a:hover { background: var(--gold); }
 
 /* Map + hours (used on about/contact) */
 .hours-list { list-style: none; margin: 0; padding: 0; }
@@ -344,4 +347,4 @@ iframe.map { width: 100%; height: 320px; border: 0; border-radius: var(--radius)
 
 .tip-list { list-style: none; margin: 0; padding: 0; }
 .tip-list li { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px dashed var(--gray-100); }
-.tip-list li::before { content: "→"; color: var(--red); font-weight: 800; }
+.tip-list li::before { content: "→"; color: var(--accent); font-weight: 800; }
